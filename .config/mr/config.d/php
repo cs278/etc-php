@@ -1,0 +1,5 @@
+[src/phpenv]
+checkout = git clone git://github.com/cs278/phpenv.git
+
+[src/php-build]
+checkout = git clone git://github.com/CHH/php-build.git
