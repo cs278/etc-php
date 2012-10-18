@@ -1,0 +1,8 @@
+path_unshift "$HOME/src/php-build/bin"
+path_unshift "$HOME/src/phpenv/bin"
+
+# Enable phpenv shims and completion if installed
+if which phpenv &>/dev/null;
+then
+	eval "$(phpenv init -)"
+fi
