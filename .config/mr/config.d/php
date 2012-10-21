@@ -10,3 +10,10 @@ checkout =
 	cd composer &&
 	git remote add cs278 cs278:composer
 pre_update = git remote update
+
+[src/symfony]
+checkout =
+	git clone cs278:symfony &&
+	cd symfony &&
+	git remote add upstream gh:symfony/symfony
+pre_update = git remote update
