@@ -3,3 +3,10 @@ checkout = git clone git://github.com/cs278/phpenv.git
 
 [src/php-build]
 checkout = git clone git://github.com/CHH/php-build.git
+
+[src/composer]
+checkout =
+	git clone gh:composer/composer &&
+	cd composer &&
+	git remote add cs278 cs278:composer
+pre_update = git remote update
