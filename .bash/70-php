@@ -6,3 +6,5 @@ if which phpenv &>/dev/null;
 then
 	eval "$(phpenv init -)"
 fi
+
+alias composer='~/src/composer/bin/composer'
