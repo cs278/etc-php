@@ -18,3 +18,10 @@ checkout =
 	cd symfony &&
 	git remote add upstream gh:symfony/symfony
 pre_update = git remote update
+
+[src/editorconfig-gedit]
+checkout =
+	git clone gh:editorconfig/editorconfig-gedit &&
+	cd editorconfig-gedit &&
+	git submodule update --init
+fixups = $HOME/src/editorconfig-gedit/install.sh
