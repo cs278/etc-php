@@ -25,3 +25,9 @@ checkout =
 	cd editorconfig-gedit &&
 	git submodule update --init
 fixups = $HOME/src/editorconfig-gedit/install.sh
+
+[.config/sublime-text-2/Packages/PHP-Twig]
+checkout = git clone gh:Anomareh/PHP-Twig.tmbundle.git $MR_REPO
+
+[.config/sublime-text-2/Packages/Composer]
+checkout = git clone gh:francodacosta/composer-sublime.git $MR_REPO
