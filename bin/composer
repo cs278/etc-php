@@ -1,0 +1,40 @@
+#!/bin/sh
+
+##
+## Composer launcher
+##
+## Tries to run $COMPOSER_BIN or my source checkout,
+## falls back to searching through $PATH for composer.
+##
+
+COMPOSER_BIN=${COMPOSER_BIN:-$HOME/src/composer/bin/composer}
+
+if [ -x "$COMPOSER_BIN" ];
+then
+	composer="$COMPOSER_BIN";
+else
+	self=$(readlink -f "$0")
+
+	for bin in $(which -a composer);
+	do
+		if [ $(echo "$bin" | cut -b1) != "/" ];
+		then
+			bin=`pwd`/$bin
+		fi
+
+		if [ -x "$bin" ] && [ $(readlink -f "$bin") != "$self" ];
+		then
+			composer="$bin"
+
+			break
+		fi
+	done
+fi
+
+if [ -x "$composer" ];
+then
+	exec "$composer" $@
+else
+	echo "Composer could not be found" >&2
+	exit 1
+fi
