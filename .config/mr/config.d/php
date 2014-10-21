@@ -11,6 +11,9 @@ checkout =
 	cd composer &&
 	git remote add cs278 cs278:composer
 pre_update = git remote update
+fixups =
+	curl -s https://getcomposer.org/composer.phar > composer.phar &&
+	php composer.phar install --dev
 
 [src/symfony]
 checkout =
