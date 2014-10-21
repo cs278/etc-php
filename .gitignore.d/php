@@ -13,6 +13,8 @@
 !/.config/sublime-text-2/Packages
 !/.config/sublime-text-2/Packages/User
 !/.config/sublime-text-2/Packages/User/composer-sublime.sublime-settings
+!/.gitignore.d
+!/.gitignore.d/php
 !/.profile.d
 !/.profile.d/70-php
 !/README.md
