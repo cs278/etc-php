@@ -11,11 +11,12 @@ checkout =
 	cd composer &&
 	git remote add cs278 cs278:composer
 pre_update = git remote update
-post_update = bin/composer install || (
-	composer=$(mktemp) &&
-	wget -O"$composer" https://getcomposer.org/composer.phar &&
-	php -f "$composer" install &&
-	rm "$composer")
+post_update = ! which php >/dev/null 2>&1 ||
+	bin/composer install || (
+		composer=$(mktemp) &&
+		wget -O"$composer" https://getcomposer.org/composer.phar &&
+		php -f "$composer" install &&
+		rm "$composer")
 
 [src/symfony]
 checkout =
