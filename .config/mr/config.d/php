@@ -34,12 +34,12 @@ fixups = $HOME/src/editorconfig-gedit/install.sh
 
 [.config/sublime-text-2/Packages/PHP-Twig]
 checkout = git clone gh:Anomareh/PHP-Twig.tmbundle.git $MR_REPO
-skip = test -L .config/mr/config.d/etc-sublime.vcsh
+skip = ! test -L .config/mr/config.d/etc-sublime.vcsh
 
 [.config/sublime-text-2/Packages/Composer]
 checkout = git clone gh:francodacosta/composer-sublime.git $MR_REPO
-skip = test -L .config/mr/config.d/etc-sublime.vcsh
+skip = ! test -L .config/mr/config.d/etc-sublime.vcsh
 
 [.config/sublime-text-2/Packages/XDebug]
 checkout = git clone gh:Kindari/SublimeXdebug.git $MR_REPO
-skip = test -L .config/mr/config.d/etc-sublime.vcsh
+skip = ! test -L .config/mr/config.d/etc-sublime.vcsh
